@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "json"
+    },
+    "portfolio": {
+      "model": "portfolio"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name"
+    },
+    "project_sections": {
+      "collection": "project-section"
+    }
+  }
+}

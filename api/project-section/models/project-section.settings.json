@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_sections",
+  "info": {
+    "name": "Project Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "project": {
+      "model": "project"
+    },
+    "content": {
+      "type": "json"
+    }
+  }
+}

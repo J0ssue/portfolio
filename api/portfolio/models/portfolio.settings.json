@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portfolios",
+  "info": {
+    "name": "Portfolio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "string"
+    },
+    "nn": {
+      "type": "string"
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "unsplash_link": {
+      "type": "string"
+    },
+    "menu": {
+      "type": "json"
+    },
+    "stack": {
+      "type": "json"
+    },
+    "projects": {
+      "collection": "project"
+    },
+    "avatar": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "hero_featured_image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

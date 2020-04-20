@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "images",
+  "info": {
+    "name": "Images"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "featured_image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "richtext"
+    },
+    "project": {
+      "model": "project"
+    }
+  }
+}

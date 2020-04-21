@@ -112,3 +112,4 @@ coverage
 exports
 .cache
 build
+node_modules
